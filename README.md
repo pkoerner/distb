@@ -63,7 +63,8 @@ This is a variation of `Hanoi.mch`, but it uses only 10 discs.
 
 ### `ModeProtocolMachine_mch.eventb`
 
-The model was developed by Space Systems Finland as part of a Distributed System for Attitude and Orbit Control for a Single Spacecraft (DSAOCSS) System.  The model was a part of the case study within the EU Project DEPLOY.
+In our benchmarks, this model is referred to as "MPM".
+The model was developed by Space Systems Finland as part of a Distributed System for Attitude and Orbit Control for a Single Spacecraft (DSAOCSS) System. The model was a part of the case study within the EU Project DEPLOY.
 
 See also: 
 
@@ -84,6 +85,7 @@ See also:
 
 ### `Ref5_Switch_mch.eventb`
 
+In our benchmarks, this model is referred to as "Landing Gear".
 This machine is the fifth refinement step of a model of a landing gear. The landing gear system was a case study at ABZ 2014. 
 
 See also:
