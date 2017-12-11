@@ -42,6 +42,21 @@ Run as many workers as you want:
 ## Models
 
 
+### `CAN_BUS_tlc.mch`
+ <!-- TODO -->
+
+### `earley_2.eventb`
+This is a model of the earley parsing algorithm, written by <!-- TODO -->.
+
+
+### `Hanoi.mch`
+This is a model of the famous Tower of Hanoi puzzle. It uses 15 discs.
+
+
+### `Hanoi10d.mch`
+This is a variation of `Hanoi.mch`, but it uses only 10 discs.
+
+
 ### `ModeProtocolMachine_mch.eventb`
 
 The model was developed by Space Systems Finland as part of a Distributed System for Attitude and Orbit Control for a Single Spacecraft (DSAOCSS) System.  The model was a part of the case study within the EU Project DEPLOY.
@@ -62,15 +77,22 @@ See also:
 - Dubravka Ilic, Timo Latvala, Pauli Väisänen, Kimmo Varpaaniemi, Linas Laibinis, and Elena Troubitsyna. DEPLOY Deliverable D20 D3.1 - Report on Pilot Deployment in the Space Sector. Technical report, 2010. Available at http://www.deploy-project.eu/html/deliverables.html.
 - Dubravka Ilic, Timo Latvala, Laura Nummila, Tuomas Räsänen, Pauli Väisänen, Kimmo Varpaaniemi, Linas Laibinis, Yuliya Prokhorova, Elena Troubitsyna, Alexei Iliasov, Alexander Romanovsky, Michael Butler, Asieh Salehi Fathabadi, Abdolbaghi Rezazadeh, Jean-Christophe Deprez, Renaud De Landtsheer, and Christophe Ponsard. DEPLOY Deliverable D39 D3.2 - Report on Enhanced Deployment in the Space Sector. Technical report, 2011. Available at http://www.deploy-project.eu/html/deliverables.html.
 
-### `earley_2.eventb`
-This is a model of the earley parsing algorithm, written by <!-- TODO -->.
+
+### `Ref5_Switch_mch.eventb`
+
+This machine is the fifth refinement step of a model of a landing gear. The landing gear system was a case study at ABZ 2014. 
+
+See also:
+- D. Hansen, L. Ladenberger, H. Wiegard, J. Bendisposto, and M. Leuschel. Validation of the ABZ Landing Gear System Using ProB. Springer, 2014.
 
 
-### `CAN_BUS_tlc.mch`
- <!-- TODO -->
+### `rether.eventb`
 
-### `Hanoi.mch`
-This is a model of the famous Tower of Hanoi puzzle. It uses up to 15 discs.
+This is a model of a real time ethernet protocol. The Event-B model is a translation by Marc Büngener of a model for DiVinE.
+
+See also:
+- Chitra Venkatramani and Tzicker Chiueh. Design, Implementation, and Evaluation of a Software-based Real-time Ethernet Protocol. SIGCOMM Comput. Commun. Rev., 25(4):27–37, October 1995.
+
 
 ### `Train_1_beebook_TLC.mch`
 
