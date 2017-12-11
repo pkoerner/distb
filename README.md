@@ -43,10 +43,12 @@ Run as many workers as you want:
 
 
 ### `CAN_BUS_tlc.mch`
- <!-- TODO -->
+
+This is a model of a CAN (Controller Area Network) bus which are usually used in cars. It was written by John Colley.
+
 
 ### `earley_2.eventb`
-This is a model of the earley parsing algorithm, written by <!-- TODO -->.
+This is a model of the earley parsing algorithm, written by Jean-Raymond Abrial, with the help of Dominique Cansell. The purpose was to formally derive the Earley parsing algorithm in Event-B and to establish its correctness. The model contains four refinement steps and very complicated guards. Every event corresponds to a step in the parsing algorithm. The purpose was to animate the model for a particular grammar and to reproduce the sequence in http://en.wikipedia.org/wiki/Earley\_parser.
 
 
 ### `Hanoi.mch`
