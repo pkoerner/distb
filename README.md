@@ -40,6 +40,33 @@ Run as many workers as you want:
 /path/to/prob/probcli -zmq_worker2 $MASTER_IP 5000 $PROXY_NUMBER $LOGFILE_FOR_WORKER &
 ```
 
+#### Note:
+It might be necessary to increase the limits of how much shared memory may be allocated,
+both per segment and overall.
+This is, to our knowledge, required for Mac OS X and older versions of Ubuntu.
+You can view the limits by running:
+
+```
+sysctl -a | grep shm
+```
+
+Per default, recent versions of Ubuntu set the following values:
+
+```
+kernel.shmall = 18446744073692774399
+kernel.shmmax = 18446744073692774399
+kernel.shmmni = 4096
+```
+
+On Mac OS X, the keys might be different and you can set them by executing:
+
+```
+sudo sysctl -w kern.sysv.shmmax=18446744073692774399
+sudo sysctl -w kern.sysv.shmseg=4096
+sudo sysctl -w kern.sysv.shmall=18446744073692774399
+```
+
+
 
 ## Models
 
