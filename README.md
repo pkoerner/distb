@@ -2,7 +2,9 @@
 
 ## How to Run
 
-For both ProB and distb, extract the archive `ProB.tar.gz`.
+For both ProB and distb, extract the archive `ProB.tar.gz` (benchmarked version for Linux).
+For other systems download the [latest nightly build](https://www3.hhu.de/stups/downloads/prob/tcltk/nightly/).
+
 
 ### Standard ProB
 ```
