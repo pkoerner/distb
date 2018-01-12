@@ -69,7 +69,7 @@ Run as many workers as you want:
 /path/to/prob/probcli -zmq_worker <unique identifier> &
 ```
 
-You can fine-tune the following parameters by adding ``-p NAME VALUE`` to the corresponding call:
+You can fine-tune the following parameters by adding ``-p NAME VALUE`` to the corresponding call (e.g., ``./probcli -zmq_worker worker1 -p port 5010 -p max_states_in_memory 100``) :
 
 Parameter | Default | Description | Applicable for...
 ----------|---------|-------------|-------------------
