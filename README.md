@@ -4,6 +4,7 @@
 
 For both ProB and distb, extract the archive `ProB.tar.gz` (benchmarked version for Linux).
 For other systems download the [latest nightly build](https://www3.hhu.de/stups/downloads/prob/tcltk/nightly/).
+In comparison to the binary provided in the repository, the latest nightly additionally makes use of a database in order to store most of the queue items on disk and a creeping memory leak is fixed.
 
 
 ### Standard ProB
