@@ -77,7 +77,7 @@ port      | 5000    | TCP ports should be used starting at... | master, worker
 ip        | localhost | IP of the master component | master
 max_states | 0 | how many states should be checked at most (0 means all) | master
 tmpdir | /tmp/ | directory for temporary files | master, worker
-logdir | ./distb-logs | directory for log output | master, worker
+logdir | ./distb-logs | directory for log output (must exist) | master, worker
 proxynumber | 0 | which proxy should the component connect to (if multiple run on the same machine) | worker
 max_states_in_memory | 1000 | how many states may be kept in memory before written into a database | worker
 
