@@ -5,6 +5,7 @@
 For both ProB and distb, extract the archive `ProB.tar.gz` (benchmarked version for Linux).
 For other systems download the [latest nightly build](https://www3.hhu.de/stups/downloads/prob/tcltk/nightly/).
 In comparison to the binary provided in the repository, the latest nightly additionally makes use of a database in order to store most of the queue items on disk and a creeping memory leak is fixed.
+Furthermore, the large amount of parameters was changed to named parameters with sane default, thus the startup instructions are different (see below).
 
 
 ### Standard ProB
@@ -42,6 +43,45 @@ Run as many workers as you want:
 ```
 /path/to/prob/probcli -zmq_worker2 $MASTER_IP 5000 $PROXY_NUMBER $LOGFILE_FOR_WORKER &
 ```
+#### Running distb Manually (nightly)
+
+Run once per machine:
+
+```
+/path/to/prob/lib/proxy $MASTER_IP 5000 $IP 30 $LOGFILE_PROXY $PROXY_NUMBER
+```
+
+Note that on Linux systems you might need to set the `LD_LIBRARY_PATH` variable to find the ZeroMQ libraries beforehand:
+```
+export LD_LIBRARY_PATH=/path/to/prob/lib
+```
+
+
+Run once per model checking:
+
+```
+/path/to/prob/probcli -bf -zmq_master <unique identifier> $MODEL
+```
+
+Run as many workers as you want:
+
+```
+/path/to/prob/probcli -zmq_worker <unique identifier> &
+```
+
+You can fine-tune the following parameters by adding ``-p NAME VALUE`` to the corresponding call:
+
+Parameter | Default | Description | Applicable for...
+----------|---------|-------------|-------------------
+port      | 5000    | TCP ports should be used starting at... | master, worker
+ip        | localhost | IP of the master component | master
+max_states | 0 | how many states should be checked at most (0 means all) | master
+tmpdir | /tmp/ | directory for temporary files | master, worker
+logdir | ./distb-logs | directory for log output | master, worker
+proxynumber | 0 | which proxy should the component connect to (if multiple run on the same machine) | worker
+max_states_in_memory | 1000 | how many states may be kept in memory before written into a database | worker
+
+
 
 #### Note:
 It might be necessary to increase the limits of how much shared memory may be allocated,
